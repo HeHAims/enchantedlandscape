@@ -1,2 +1,18 @@
-# enchantedlandscape
-Single-page landscaping website built with HTML, CSS, and JavaScript — includes portfolio filter and estimate modal.
+﻿# Enchanted Landscape
+
+Single-page marketing site for a Las Vegas landscape design + outdoor living brand.
+
+## What’s inside
+- `index.html` — full layout, styles, and interactions (portfolio filter + estimate modal)
+
+## Run locally
+Just open `index.html` in a browser.
+
+## GitHub Pages
+This repo includes a GitHub Actions workflow to deploy the site with GitHub Pages.
+
+If Pages isn’t enabled yet:
+1. Go to **Settings → Pages**
+2. Under **Source**, select **GitHub Actions**
+
+Once enabled, pushes to `main` will publish automatically.
