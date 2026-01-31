@@ -2,6 +2,10 @@
 
 Single-page marketing site for a Las Vegas landscape design + outdoor living brand.
 
+## Live site
+- After GitHub Pages is enabled, the site will be available at:
+  `https://hehaims.github.io/enchantedlandscape/`
+
 ## What’s inside
 - `index.html` — full layout, styles, and interactions (portfolio filter + estimate modal)
 
