@@ -4,24 +4,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Enchanted Landscape — desert-smart landscape design & outdoor living in Las Vegas." />
+  <meta name="description" content="Enchanted Landscape creates desert-smart landscape design, turf, pavers, lighting, and outdoor living spaces for Las Vegas homeowners." />
   <title>Enchanted Landscape | Las Vegas Landscape Design & Outdoor Living</title>
 
   <style>
     :root{
-      --bg:#0b0f0d;
-      --panel:#0f1512;
-      --card:#111a16;
-      --muted:#9fb3a7;
-      --text:#e9f3ee;
-      --brand:#57d68d;
-      --brand2:#3fbef5;
+      --bg:#0c100d;
+      --panel:#101712;
+      --card:#131b16;
+      --muted:#b1bfae;
+      --text:#f3f7f1;
+      --brand:#7bc96f;
+      --brand2:#d6a84f;
       --danger:#ff5f6d;
       --ring: rgba(87,214,141,.35);
       --shadow: 0 14px 38px rgba(0,0,0,.45);
       --shadow2: 0 10px 22px rgba(0,0,0,.35);
-      --radius: 20px;
-      --radius2: 14px;
+      --radius: 8px;
+      --radius2: 6px;
       --max: 1120px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -33,10 +33,8 @@
       font-family: var(--sans);
       color:var(--text);
       background:
-        radial-gradient(1200px 700px at 18% 6%, rgba(87,214,141,.16), transparent 60%),
-        radial-gradient(900px 600px at 85% 14%, rgba(63,190,245,.14), transparent 56%),
-        radial-gradient(700px 560px at 55% 90%, rgba(87,214,141,.10), transparent 60%),
-        linear-gradient(180deg, #070a08, var(--bg));
+        linear-gradient(180deg, rgba(7,10,8,.78), rgba(12,16,13,.96)),
+        url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80") center/cover fixed;
       overflow-x:hidden;
     }
     a{color:inherit; text-decoration:none}
@@ -78,10 +76,10 @@
       display:flex; gap:10px; align-items:center;
     }
     .logo{
-      width:38px; height:38px; border-radius:12px;
+      width:38px; height:38px; border-radius:8px;
       background:
         radial-gradient(16px 16px at 30% 30%, rgba(255,255,255,.30), transparent 60%),
-        linear-gradient(135deg, rgba(87,214,141,.95), rgba(63,190,245,.85));
+        linear-gradient(135deg, rgba(123,201,111,.95), rgba(214,168,79,.85));
       box-shadow: 0 14px 30px rgba(0,0,0,.35);
     }
     .brand .name{
@@ -112,7 +110,7 @@
     .btn:active{transform: translateY(1px)}
     .btn.primary{
       border-color: rgba(87,214,141,.35);
-      background: linear-gradient(135deg, rgba(87,214,141,.20), rgba(63,190,245,.12));
+      background: linear-gradient(135deg, rgba(123,201,111,.22), rgba(214,168,79,.14));
       box-shadow: 0 0 0 0 rgba(87,214,141,.0);
     }
     .btn.primary:hover{box-shadow: 0 0 0 4px var(--ring)}
@@ -159,7 +157,9 @@
       align-items: stretch;
     }
     .hero-card{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      background:
+        linear-gradient(90deg, rgba(8,12,9,.92), rgba(8,12,9,.65) 58%, rgba(8,12,9,.25)),
+        url("https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1400&q=80") center/cover;
       border: 1px solid rgba(255,255,255,.10);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -171,8 +171,8 @@
       content:"";
       position:absolute; inset:-80px -80px auto auto;
       width: 420px; height: 420px;
-      background: radial-gradient(circle at 30% 30%, rgba(87,214,141,.35), transparent 60%),
-                  radial-gradient(circle at 70% 70%, rgba(63,190,245,.24), transparent 65%);
+      background: radial-gradient(circle at 30% 30%, rgba(123,201,111,.28), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(214,168,79,.22), transparent 65%);
       filter: blur(2px);
       opacity:.9;
       pointer-events:none;
@@ -218,7 +218,7 @@
     }
     .stat b{color: var(--text)}
     .badge{
-      width:30px; height:30px; border-radius: 12px;
+      width:30px; height:30px; border-radius: 8px;
       display:grid; place-items:center;
       background: rgba(87,214,141,.14);
       border: 1px solid rgba(87,214,141,.22);
@@ -261,7 +261,7 @@
     }
     .mini-tile{
       padding: 10px;
-      border-radius: 14px;
+      border-radius: 8px;
       background: rgba(0,0,0,.20);
       border: 1px solid rgba(255,255,255,.08);
       font-size: 12px;
@@ -293,7 +293,7 @@
     }
     .card:hover{transform: translateY(-2px); border-color: rgba(255,255,255,.16); background: rgba(17,26,22,.72)}
     .icon{
-      width: 40px; height: 40px; border-radius: 14px;
+      width: 40px; height: 40px; border-radius: 8px;
       display:grid; place-items:center;
       background: rgba(87,214,141,.14);
       border: 1px solid rgba(87,214,141,.20);
@@ -345,11 +345,16 @@
     }
     .shot .img{
       height: 150px;
-      background:
-        radial-gradient(220px 160px at 20% 20%, rgba(87,214,141,.28), transparent 60%),
-        radial-gradient(220px 160px at 80% 20%, rgba(63,190,245,.22), transparent 60%),
-        linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
+      background-position:center;
+      background-size:cover;
+      filter:saturate(.96) contrast(1.04);
     }
+    .shot.turf .img{background-image:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.34)), url("enchantedpictures/showcase/showcase-01-turf-curves.jpg")}
+    .shot.pavers .img{background-image:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.34)), url("enchantedpictures/showcase/showcase-06-finished-feature.jpg")}
+    .shot.lighting .img{background-image:linear-gradient(180deg, transparent 48%, rgba(0,0,0,.42)), url("enchantedpictures/showcase/showcase-09-water-feature-wall.jpg")}
+    .shot.planting .img{background-image:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.34)), url("enchantedpictures/showcase/showcase-08-desert-planting.jpg")}
+    .shot.courtyard .img{background-image:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.36)), url("enchantedpictures/showcase/showcase-07-entry-steps.jpg")}
+    .shot.green .img{background-image:linear-gradient(180deg, transparent 50%, rgba(0,0,0,.34)), url("enchantedpictures/showcase/showcase-03-putting-green.jpg")}
     .shot .meta{padding: 12px}
     .shot b{display:block; font-size: 14px}
     .shot span{display:block; margin-top: 4px; font-size: 12px; color: rgba(233,243,238,.75)}
@@ -392,8 +397,8 @@
     .quote p{margin:0; color: rgba(233,243,238,.82); font-size: 13px; line-height:1.55}
     .quote .who{display:flex; align-items:center; gap:10px; margin-top: 12px}
     .avatar{
-      width:34px; height:34px; border-radius: 14px;
-      background: linear-gradient(135deg, rgba(87,214,141,.55), rgba(63,190,245,.45));
+      width:34px; height:34px; border-radius: 8px;
+      background: linear-gradient(135deg, rgba(123,201,111,.55), rgba(214,168,79,.45));
       border: 1px solid rgba(255,255,255,.12);
     }
     .who b{display:block; font-size: 13px}
@@ -414,7 +419,7 @@
     input, textarea, select{
       width:100%;
       padding: 11px 12px;
-      border-radius: 14px;
+      border-radius: 8px;
       border: 1px solid rgba(255,255,255,.12);
       background: rgba(0,0,0,.25);
       color: var(--text);
@@ -439,18 +444,17 @@
     .info .line span{display:block; font-size: 12px; color: rgba(233,243,238,.74); margin-top: 3px}
     .map{
       margin-top: 12px;
-      border-radius: 18px;
+      border-radius: 8px;
       border: 1px solid rgba(255,255,255,.10);
       overflow:hidden;
       height: 210px;
       background:
-        radial-gradient(240px 180px at 20% 30%, rgba(63,190,245,.20), transparent 60%),
-        radial-gradient(240px 180px at 80% 20%, rgba(87,214,141,.18), transparent 60%),
-        linear-gradient(135deg, rgba(255,255,255,.05), rgba(255,255,255,.01));
-      display:grid; place-items:center;
+        linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.62)),
+        url("https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=900&q=80") center/cover;
+      display:flex; align-items:flex-end; justify-content:flex-start;
       color: rgba(233,243,238,.75);
       font-size: 13px;
-      text-align:center;
+      text-align:left;
       padding: 16px;
     }
 
@@ -547,10 +551,10 @@
       <div class="row">
         <div class="pill">
           <span class="dot" aria-hidden="true"></span>
-          <span><strong>Enchanted Landscape</strong> • Desert-smart design + outdoor living • Las Vegas</span>
+          <span><strong>Enchanted Landscape</strong> • Estimates: (702) 348-3030 • Project Manager: (702) 772-7633</span>
         </div>
         <div class="mini">
-          <a class="btnlink" href="#contact">Get a quote</a>
+          <a class="btnlink" href="tel:7023483030">Call for estimate</a>
           <span aria-hidden="true"> • </span>
           <a class="btnlink" href="#portfolio">See work</a>
         </div>
@@ -565,7 +569,7 @@
           <div class="logo" aria-hidden="true"></div>
           <div class="name">
             <strong>Enchanted Landscape</strong>
-            <span>Landscape Design • Outdoor Living • Las Vegas</span>
+            <span>Landscape Design + Outdoor Living</span>
           </div>
         </a>
 
@@ -573,6 +577,7 @@
           <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="showcase.html">Showcase</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -587,7 +592,7 @@
             <span class="dot" aria-hidden="true"></span>
             Instant Estimate
           </button>
-          <a class="btn primary" href="#contact">Book a Consultation</a>
+          <a class="btn primary" href="tel:7023483030">Call (702) 348-3030</a>
         </div>
       </div>
     </div>
@@ -603,15 +608,16 @@
       <ul>
         <li><a href="#services" class="drawerLink">Services</a></li>
         <li><a href="#portfolio" class="drawerLink">Portfolio</a></li>
+        <li><a href="showcase.html" class="drawerLink">Showcase</a></li>
         <li><a href="#process" class="drawerLink">Process</a></li>
         <li><a href="#reviews" class="drawerLink">Reviews</a></li>
         <li><a href="#contact" class="drawerLink">Contact</a></li>
       </ul>
       <div class="actions">
         <button class="btn" id="openEstimate2">Instant Estimate</button>
-        <a class="btn primary drawerLink" href="#contact">Book a Consultation</a>
+        <a class="btn primary drawerLink" href="tel:7023483030">Call Office</a>
       </div>
-      <p class="fineprint">This is a front-end demo. Hook the form to email/CRM later.</p>
+      <p class="fineprint">Tell us what you are building and we will help shape the next step.</p>
     </div>
   </div>
 
@@ -623,17 +629,18 @@
             <div class="hero-inner">
               <div class="kicker">
                 <span class="dot" aria-hidden="true"></span>
-                <span>Design-build for <code>desert climate</code> + modern outdoor living</span>
+                <span>Design-build landscapes for <code>Las Vegas</code> homes</span>
               </div>
 
-              <h1>Turn your yard into an outdoor space you actually use.</h1>
+              <h1>Professional landscapes built for desert living.</h1>
               <p class="lead">
-                Enchanted Landscape designs and builds low-maintenance, high-impact outdoor spaces —
-                turf, pavers, lighting, water-smart planting, and custom features that feel like a staycation.
+                Enchanted Landscape creates polished, low-maintenance outdoor spaces with turf, pavers,
+                lighting, water-smart planting, and custom features designed for how your family actually lives.
               </p>
 
               <div class="hero-actions">
                 <a class="btn primary" href="#portfolio">View Portfolio</a>
+                <a class="btn" href="showcase.html">Project Showcase</a>
                 <button class="btn" id="openEstimate3">Instant Estimate</button>
                 <a class="btn ghost" href="#services">Explore Services</a>
               </div>
@@ -645,7 +652,7 @@
                       <path d="M20 6 9 17l-5-5"/>
                     </svg>
                   </div>
-                  <div><b>Desert-smart</b><br><span style="color:var(--muted)">Water-aware designs</span></div>
+                  <div><b>Water-smart</b><br><span style="color:var(--muted)">Designed for local conditions</span></div>
                 </div>
                 <div class="stat">
                   <div class="badge" aria-hidden="true">
@@ -661,7 +668,7 @@
                       <path d="M3 12h18M3 6h18M3 18h18"/>
                     </svg>
                   </div>
-                  <div><b>Clean installs</b><br><span style="color:var(--muted)">Detail-driven craftsmanship</span></div>
+                  <div><b>Clean installs</b><br><span style="color:var(--muted)">Professional finish standards</span></div>
                 </div>
               </div>
             </div>
@@ -669,8 +676,8 @@
 
           <div class="side">
             <div class="side-card reveal">
-              <h3>Popular upgrades</h3>
-              <p>Fast wins that make a backyard feel “finished” without the chaos.</p>
+              <h3>Popular project goals</h3>
+              <p>Focused upgrades that make a yard easier to enjoy, maintain, and show with confidence.</p>
               <div class="mini-grid">
                 <div class="mini-tile">
                   <b>Synthetic turf</b>
@@ -682,11 +689,11 @@
                 </div>
                 <div class="mini-tile">
                   <b>Lighting</b>
-                  <span>Night-time vibe</span>
+                  <span>Evening curb appeal</span>
                 </div>
                 <div class="mini-tile">
                   <b>Planting</b>
-                  <span>Desert-friendly palette</span>
+                  <span>Water-wise plant palette</span>
                 </div>
               </div>
             </div>
@@ -694,9 +701,9 @@
             <div class="side-card reveal">
               <div class="row">
                 <h3 style="margin:0">Project readiness</h3>
-                <span style="font-family:var(--mono); font-size:12px; color:rgba(233,243,238,.72)">~2–6 weeks typical</span>
+                <span style="font-family:var(--mono); font-size:12px; color:rgba(233,243,238,.72)">Plan • Price • Build</span>
               </div>
-              <p>Answer a few questions and we’ll propose a direction + budget range.</p>
+              <p>Share the size, scope, and priorities. We will help turn the idea into a clear project path.</p>
               <div class="meter" aria-label="Readiness meter"><i></i></div>
               <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
                 <button class="btn primary" id="openEstimate4">Instant Estimate</button>
@@ -713,50 +720,50 @@
         <div class="section-head">
           <div>
             <h2>Services</h2>
-            <p>Pick what you need — or let us package it into a full backyard transformation.</p>
+            <p>From single upgrades to complete outdoor transformations, every project is planned around function, budget, and long-term maintenance.</p>
           </div>
         </div>
 
         <div class="grid-3">
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">🌿</div>
+            <div class="icon" aria-hidden="true">LD</div>
             <h3>Landscape Design + Build</h3>
-            <p>Custom layout, grading, planting, rock, edging, and water-smart planning for desert conditions.</p>
+            <p>Custom layouts, grading, planting, rock, edging, and material selections matched to desert conditions.</p>
             <span class="tag">Best for full yard redesigns</span>
           </article>
 
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">🧱</div>
+            <div class="icon" aria-hidden="true">PV</div>
             <h3>Pavers + Hardscape</h3>
-            <p>Patios, walkways, steps, retaining walls, and clean transitions that make the yard feel premium.</p>
+            <p>Patios, walkways, steps, retaining walls, and clean transitions that make the yard feel finished.</p>
             <span class="tag">Entertaining + curb appeal</span>
           </article>
 
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">🏌️</div>
+            <div class="icon" aria-hidden="true">TF</div>
             <h3>Synthetic Turf + Putting Greens</h3>
             <p>Durable turf systems with proper base + drainage — built for heat and heavy use.</p>
             <span class="tag">Low maintenance, high impact</span>
           </article>
 
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">💡</div>
+            <div class="icon" aria-hidden="true">LT</div>
             <h3>Landscape Lighting</h3>
-            <p>Path, uplight, and feature lighting to create “night mode” and improve safety.</p>
+            <p>Path, uplight, and feature lighting that adds safety, depth, and a premium evening look.</p>
             <span class="tag">Instant vibe upgrade</span>
           </article>
 
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">💧</div>
+            <div class="icon" aria-hidden="true">IR</div>
             <h3>Irrigation + Drip</h3>
             <p>Modern drip zones, timers, and fixes that reduce waste and keep plants thriving.</p>
             <span class="tag">Water-wise systems</span>
           </article>
 
           <article class="card reveal">
-            <div class="icon" aria-hidden="true">🔥</div>
+            <div class="icon" aria-hidden="true">OF</div>
             <h3>Outdoor Features</h3>
-            <p>Fire features, seating walls, pergola-ready pads, and focal points that pull it all together.</p>
+            <p>Fire features, seating walls, pergola-ready pads, and focal points that make the space memorable.</p>
             <span class="tag">Make it a destination</span>
           </article>
         </div>
@@ -767,8 +774,8 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Portfolio</h2>
-            <p>Filter by category. Replace these placeholders with real project photos later.</p>
+            <h2>Project Gallery</h2>
+            <p>Real showroom and project photos organized for new customers to see materials, stonework, pavers, and outdoor feature ideas.</p>
           </div>
           <div class="filters" aria-label="Portfolio filters">
             <button class="chip active" data-filter="all">All</button>
@@ -780,35 +787,35 @@
         </div>
 
         <div class="gallery" id="gallery">
-          <div class="shot reveal" data-tags="turf design">
+          <div class="shot turf reveal" data-tags="turf design">
             <div class="label">Turf</div>
             <div class="img" role="img" aria-label="Turf yard concept image"></div>
-            <div class="meta"><b>Backyard Turf Refresh</b><span>Low-water lawn feel • Clean borders</span></div>
+            <div class="meta"><b>Stone + Planting Layout</b><span>Desert texture • Natural border work</span></div>
           </div>
-          <div class="shot reveal" data-tags="pavers design">
+          <div class="shot pavers reveal" data-tags="pavers design">
             <div class="label">Pavers</div>
             <div class="img" role="img" aria-label="Paver patio concept image"></div>
-            <div class="meta"><b>Paver Patio + Walkway</b><span>Entertaining zone • Modern lines</span></div>
+            <div class="meta"><b>Paver Patio Feature</b><span>Outdoor wall • Finished hardscape</span></div>
           </div>
-          <div class="shot reveal" data-tags="lighting">
+          <div class="shot lighting reveal" data-tags="lighting">
             <div class="label">Lighting</div>
             <div class="img" role="img" aria-label="Landscape lighting concept image"></div>
-            <div class="meta"><b>Night Mode Lighting</b><span>Paths • Feature uplights</span></div>
+            <div class="meta"><b>Project Detail</b><span>Structure • Stone • Finish work</span></div>
           </div>
-          <div class="shot reveal" data-tags="design">
+          <div class="shot planting reveal" data-tags="design">
             <div class="label">Design</div>
             <div class="img" role="img" aria-label="Planting design concept image"></div>
-            <div class="meta"><b>Desert Planting Plan</b><span>Texture • Color • Heat-tough</span></div>
+            <div class="meta"><b>Showroom Detail</b><span>Materials • Plants • Rock palette</span></div>
           </div>
-          <div class="shot reveal" data-tags="pavers lighting">
+          <div class="shot courtyard reveal" data-tags="pavers lighting">
             <div class="label">Hardscape</div>
             <div class="img" role="img" aria-label="Hardscape concept image"></div>
-            <div class="meta"><b>Courtyard Upgrade</b><span>Pavers + lighting integration</span></div>
+            <div class="meta"><b>Courtyard Upgrade</b><span>Pavers • Stone • Outdoor living</span></div>
           </div>
-          <div class="shot reveal" data-tags="turf">
+          <div class="shot green reveal" data-tags="turf">
             <div class="label">Turf</div>
             <div class="img" role="img" aria-label="Putting green concept image"></div>
-            <div class="meta"><b>Putting Green Corner</b><span>Practice zone • Premium finish</span></div>
+            <div class="meta"><b>Landscape Finish</b><span>Clean installation • Customer-ready look</span></div>
           </div>
         </div>
       </div>
@@ -819,7 +826,7 @@
         <div class="section-head">
           <div>
             <h2>Our process</h2>
-            <p>Simple, predictable, and clean — so you’re not living in a construction zone forever.</p>
+            <p>Simple, predictable, and clean, with clear decisions before the crew arrives.</p>
           </div>
         </div>
 
@@ -827,22 +834,22 @@
           <div class="step reveal">
             <div class="num">01</div>
             <h4>Discovery</h4>
-            <p>We learn your goals, budget range, HOA rules, and how you want to use the space.</p>
+            <p>We learn your goals, budget range, access needs, HOA rules, and how you want to use the space.</p>
           </div>
           <div class="step reveal">
             <div class="num">02</div>
             <h4>Concept + Estimate</h4>
-            <p>We propose a direction with materials and a realistic price range.</p>
+            <p>We propose a direction with recommended materials and a practical price range.</p>
           </div>
           <div class="step reveal">
             <div class="num">03</div>
             <h4>Design Details</h4>
-            <p>Finalize layout, selections, and schedule. Clear scope. No mystery add-ons.</p>
+            <p>Finalize layout, selections, scope, and schedule before installation begins.</p>
           </div>
           <div class="step reveal">
             <div class="num">04</div>
             <h4>Build + Walkthrough</h4>
-            <p>Professional install, daily cleanup, and final walkthrough to lock it in.</p>
+            <p>Professional installation, jobsite cleanup, and a final walkthrough before we wrap.</p>
           </div>
         </div>
       </div>
@@ -853,22 +860,22 @@
         <div class="section-head">
           <div>
             <h2>What clients say</h2>
-            <p>Use real reviews later — these are placeholders for layout.</p>
+            <p>Homeowners choose us for clear communication, durable materials, and outdoor spaces that feel ready to use.</p>
           </div>
         </div>
 
         <div class="testimonials">
           <div class="quote reveal">
             <p>“The yard finally feels like a resort. The crew was fast, clean, and the details are on point.”</p>
-            <div class="who"><div class="avatar" aria-hidden="true"></div><div><b>Homeowner</b><span>Summerlin</span></div></div>
+            <div class="who"><div class="avatar" aria-hidden="true"></div><div><b>Backyard remodel</b><span>Summerlin</span></div></div>
           </div>
           <div class="quote reveal">
             <p>“Great communication. We knew the schedule and costs up front — zero surprises.”</p>
-            <div class="who"><div class="avatar" aria-hidden="true"></div><div><b>Client</b><span>Henderson</span></div></div>
+            <div class="who"><div class="avatar" aria-hidden="true"></div><div><b>Hardscape project</b><span>Henderson</span></div></div>
           </div>
           <div class="quote reveal">
-            <p>“Lighting at night changed everything. The backyard feels bigger and safer.”</p>
-            <div class="who"><div class="avatar" aria-hidden="true"></div><div><b>Client</b><span>Southwest</span></div></div>
+            <p>“Lighting at night changed everything. The backyard feels bigger, warmer, and safer.”</p>
+            <div class="who"><div class="avatar" aria-hidden="true"></div><div><b>Lighting upgrade</b><span>Southwest Las Vegas</span></div></div>
           </div>
         </div>
       </div>
@@ -879,7 +886,7 @@
         <div class="section-head">
           <div>
             <h2>Contact</h2>
-            <p>Send the basics and we’ll follow up. (Front-end demo: connect this form to email/CRM later.)</p>
+            <p>Tell us about your space, timeline, and priorities. We will follow up with the next best step.</p>
           </div>
         </div>
 
@@ -892,7 +899,7 @@
               </div>
               <div>
                 <label for="phone">Phone</label>
-                <input id="phone" name="phone" placeholder="(702) 555-0123" />
+                <input id="phone" name="phone" placeholder="(702) 348-3030" />
               </div>
             </div>
 
@@ -915,7 +922,7 @@
             </div>
 
             <label for="message">Project notes</label>
-            <textarea id="message" name="message" placeholder="Tell us what you want to build…"></textarea>
+            <textarea id="message" name="message" placeholder="Tell us what you want to build, your approximate yard size, and any must-have features."></textarea>
 
             <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
               <button class="btn primary" type="submit">Send Request</button>
@@ -932,15 +939,23 @@
               <div class="badge" aria-hidden="true">📍</div>
               <div>
                 <b>Service Area</b>
-                <span>Las Vegas • Henderson • North Las Vegas</span>
+                <span>Las Vegas • Henderson • North Las Vegas • Summerlin</span>
               </div>
             </div>
 
             <div class="line">
               <div class="badge" aria-hidden="true">📞</div>
               <div>
-                <b>Phone</b>
-                <span>(702) 555-0123</span>
+                <b>Office / Estimates</b>
+                <span><a href="tel:7023483030">(702) 348-3030</a></span>
+              </div>
+            </div>
+
+            <div class="line">
+              <div class="badge" aria-hidden="true">PM</div>
+              <div>
+                <b>Project Manager</b>
+                <span><a href="tel:7027727633">(702) 772-7633</a></span>
               </div>
             </div>
 
@@ -948,14 +963,14 @@
               <div class="badge" aria-hidden="true">✉️</div>
               <div>
                 <b>Email</b>
-                <span>hello@enchantedlandscape.com</span>
+                <span><a href="mailto:info@enchantedgardens.com">info@enchantedgardens.com</a></span>
               </div>
             </div>
 
             <div class="map">
               <div>
-                <b>Map embed goes here</b><br>
-                <span style="color:rgba(233,243,238,.68)">Replace this block with a Google Maps iframe.</span>
+                <b>Serving Las Vegas Valley homeowners</b><br>
+                <span style="color:rgba(233,243,238,.78)">Outdoor rooms, turf, hardscape, lighting, planting, and irrigation.</span>
               </div>
             </div>
           </aside>
@@ -982,6 +997,7 @@
           <h4>Quick links</h4>
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
+          <a href="showcase.html">Showcase</a>
           <a href="#process">Process</a>
           <a href="#contact">Contact</a>
         </div>
@@ -996,11 +1012,11 @@
 
         <div class="footer-card">
           <h4>Social</h4>
-          <a href="#" onclick="return false;">Instagram (add link)</a>
-          <a href="#" onclick="return false;">YouTube (add link)</a>
-          <a href="#" onclick="return false;">Facebook (add link)</a>
+          <a href="#contact">Project consultation</a>
+          <a href="#portfolio">Recent work</a>
+          <a href="#reviews">Customer experience</a>
           <p class="subtle" style="margin:10px 0 0">
-            Tip: swap placeholder portfolio tiles with real images and this instantly looks “done.”
+            Built for homeowners who want a clean, durable, and low-maintenance outdoor space.
           </p>
         </div>
       </div>
@@ -1016,7 +1032,7 @@
       </div>
       <div class="body">
         <p style="margin:0; color:rgba(233,243,238,.80); font-size:13px; line-height:1.55">
-          This is a quick ballpark based on size + scope. Real pricing depends on access, demo, materials, and grade.
+          This is a quick ballpark based on size and scope. Real pricing depends on access, site preparation, materials, and grade.
         </p>
 
         <div class="divider"></div>
@@ -1059,7 +1075,7 @@
         </div>
 
         <p class="fineprint" style="margin-top:10px">
-          Pro move: Add a “Pricing Estimator” page later. This modal is the lightweight version.
+          Use this range to start the conversation. A final quote is provided after project details are reviewed.
         </p>
       </div>
     </div>
@@ -1157,7 +1173,7 @@
       const addI = document.getElementById('addonIrrigation').checked;
       const addF = document.getElementById('addonFeature').checked;
 
-      // Base rates are placeholders — tune them to your real pricing.
+      // Ballpark rates used for the customer-facing estimator.
       let basePerSqft = 8;       // refresh
       let minJob = 2500;
 
@@ -1195,13 +1211,26 @@
       closeEstimateModal();
     });
 
-    // Contact form demo
+    // Contact form handoff
     document.getElementById('contactForm')?.addEventListener('submit', (e) => {
       e.preventDefault();
       const status = document.getElementById('formStatus');
-      status.textContent = "Sent (demo). Next step: connect this form to email/CRM (Formspree, Netlify, Zapier, etc.).";
+      const form = e.currentTarget;
+      const data = new FormData(form);
+      const subject = encodeURIComponent('New landscape project request');
+      const body = encodeURIComponent([
+        `Name: ${data.get('name') || ''}`,
+        `Phone: ${data.get('phone') || ''}`,
+        `Email: ${data.get('email') || ''}`,
+        `Service: ${data.get('service') || ''}`,
+        '',
+        'Project notes:',
+        data.get('message') || ''
+      ].join('\n'));
+      window.location.href = `mailto:info@enchantedgardens.com?subject=${subject}&body=${body}`;
+      status.textContent = "Thanks. Your email app should open with the project request ready to send.";
       status.style.color = "rgba(87,214,141,.9)";
-      e.target.reset();
+      form.reset();
       setTimeout(() => status.textContent = "", 5200);
     });
 

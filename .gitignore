@@ -1,0 +1,9 @@
+# Local iPhone imports and heavy raw media.
+/enchantedpictures/raw-iphone-imports/
+/enchantedpictures/showroom-pictures/
+/*.zip
+*.HEIC
+*.MOV
+
+# Prevent accidental root-level iPhone date imports from being staged.
+/[0-9][0-9][0-9][0-9][0-9][0-9]_[a-z]/
