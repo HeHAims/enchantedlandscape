@@ -1,4 +1,4 @@
-﻿# Enchanted Landscape
+﻿# Enchanted Gardens Landscaping
 
 Single-page marketing site for a Las Vegas landscape design + outdoor living brand.
 
@@ -20,3 +20,4 @@ If Pages isn’t enabled yet:
 2. Under **Source**, select **GitHub Actions**
 
 Once enabled, pushes to `main` will publish automatically.
+
