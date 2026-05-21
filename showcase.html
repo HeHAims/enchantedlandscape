@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -128,6 +128,7 @@
       width:100%;
       height:260px;
       object-fit:cover;
+      cursor:zoom-in;
       transition:transform .45s ease,filter .45s ease;
     }
     figure:hover img{transform:scale(1.04);filter:saturate(1.08)}
@@ -140,6 +141,48 @@
       color:rgba(243,247,241,.62);
       background:#0c100d;
       font-size:13px;
+    }
+    .lightbox{
+      position:fixed;
+      inset:0;
+      z-index:40;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:22px;
+      background:rgba(0,0,0,.86);
+    }
+    .lightbox.open{display:flex}
+    .lightbox-panel{
+      width:min(1180px,96vw);
+      max-height:92vh;
+      display:grid;
+      gap:12px;
+    }
+    .lightbox-bar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      color:rgba(243,247,241,.86);
+      font-size:14px;
+    }
+    .lightbox-close{
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:rgba(255,255,255,.08);
+      color:var(--text);
+      padding:10px 12px;
+      cursor:pointer;
+      font-weight:800;
+    }
+    .lightbox img{
+      max-width:100%;
+      max-height:78vh;
+      object-fit:contain;
+      border-radius:8px;
+      box-shadow:var(--shadow);
+      background:#050705;
     }
     @media(max-width:850px){
       .intro{grid-template-columns:1fr}
@@ -173,7 +216,7 @@
       <h1>Outdoor spaces with real finish.</h1>
       <p class="lead">
         A focused look at Enchanted Gardens Landscaping work: synthetic turf, paver patios,
-        stone details, planting, and outdoor features built for desert homes.
+        stone details, desert planting, and BBQ-ready outdoor features built for Las Vegas homes.
       </p>
     </div>
   </header>
@@ -185,7 +228,7 @@
           <h2>Showcase Gallery</h2>
           <p>
             These selected images highlight the strongest customer-facing details:
-            clean turf lines, usable hardscape, finished feature walls, stonework,
+            clean turf lines, usable hardscape, BBQ-ready feature walls, stonework,
             and desert-friendly planting.
           </p>
         </div>
@@ -212,7 +255,7 @@
         </figure>
         <figure class="wide">
           <img src="enchantedpictures/showcase/showcase-06-finished-feature.jpg" alt="Finished paver patio with outdoor feature wall" />
-          <figcaption><b>Finished Outdoor Feature</b><span>Pavers, stone, and turf working together as one usable space.</span></figcaption>
+          <figcaption><b>BBQ-Ready Outdoor Feature</b><span>Pavers, stone, and turf working together as one usable entertaining space.</span></figcaption>
         </figure>
         <figure>
           <img src="enchantedpictures/showcase/showcase-07-entry-steps.jpg" alt="Front entry steps with block and stone planter" />
@@ -236,8 +279,59 @@
 
   <footer>
     <div class="container">
-      Enchanted Gardens Landscaping • Las Vegas, Henderson, North Las Vegas, Summerlin • info@enchantedgardens.com
+      Enchanted Gardens Landscaping - Las Vegas, Henderson, North Las Vegas, Summerlin - info@enchantedgardens.com
     </div>
   </footer>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
+      <div class="lightbox-bar">
+        <span id="lightboxCaption"></span>
+        <button class="lightbox-close" id="lightboxClose" type="button">Close</button>
+      </div>
+      <img id="lightboxImage" alt="" />
+    </div>
+  </div>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(img){
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt || '';
+      const caption = img.closest('figure')?.querySelector('figcaption b')?.textContent || img.alt || 'Project photo';
+      lightboxCaption.textContent = caption;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(){
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      lightboxImage.removeAttribute('src');
+    }
+
+    document.querySelectorAll('.gallery img').forEach((img) => {
+      img.addEventListener('click', () => openLightbox(img));
+      img.tabIndex = 0;
+      img.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openLightbox(img);
+        }
+      });
+    });
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>
+
